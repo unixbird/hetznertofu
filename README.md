@@ -2,7 +2,7 @@
 
 This is a project to test [OpenTofu](https://opentofu.org) with the Hetzner terraform provider to create infrastructure on their cloud.
 
-I'm using opentofu [v1.6.0-alpha1](https://github.com/opentofu/opentofu/releases) for this test. 
+I'm using opentofu [v1.6.0-alpha1](https://github.com/opentofu/opentofu/releases/tag/v1.6.0-alpha1) for this test. 
 
 You will need to have a Hetzner API key and SSH key already set up. To run, clone this repo and add terraform.tfvars file that contains your API key. It should look something like this:
 
