@@ -22,7 +22,7 @@ data "template_file" "cloud_init" {
 
 resource "hcloud_server" "foo" {
     name = var.server_name
-    image = "ubuntu-22.04"
+    image = var.image_name
     server_type = var.server_type
     ssh_keys = [var.ssh_key]
     user_data = data.template_file.cloud_init.rendered
