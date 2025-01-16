@@ -2,7 +2,7 @@ terraform {
     required_providers {
         hcloud = {
             source = "hetznercloud/hcloud"
-			version = "1.43.0"
+			version = "1.45"
         }
     }
 }
@@ -24,6 +24,7 @@ resource "hcloud_server" "foo" {
     name = var.server_name
     image = var.image_name
     server_type = var.server_type
+    datacenter = var.datacenter
     ssh_keys = [var.ssh_key]
     user_data = data.template_file.cloud_init.rendered
 }
