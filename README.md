@@ -1,19 +1,14 @@
-# TofuTest
+# HetznerTofu
 
-This is a project to test [OpenTofu](https://opentofu.org) with the Hetzner terraform provider to create infrastructure on their cloud.
+Forked from [rericsson](https://github.com/rericsson/tofutest)'s test as I wanted to use it to spin up hetzner vps servers at will when I test and destroy them a minute later with some changes.
 
-I'm using opentofu [v1.6.0-alpha1](https://github.com/opentofu/opentofu/releases/tag/v1.6.0-alpha1) for this test. 
+You just need to create your SSH key and API key in Hetzner and then you can insert them in the proper fields. Insert your API key inside of the terraform.tfvars file. 
 
-You will need to have a Hetzner API key and SSH key already set up. To run, clone this repo and add terraform.tfvars file that contains your API key. It should look something like this:
 
-```
-hcloud_token = "<your-token-here>"
-```
 
-You will want to update vars.tf to your preferred server name, server type and SSH key. 
+Edit the vars.tf to your preferred spec then simply run `tofu init` and `tofu plan`. If all is well and there aren't any errors run`tofu apply` to create the server with the desired spec. 
 
-Then you can run `tofu init` and `tofu plan` to see what is going to be created. If it looks good, run `tofu apply` to create the server. 
 
 After `tofu apply` returns the IP address, login in to that server using ssh with your specified key as root.
 
-When you are done, you can delete the server with `tofu destroy`.  
+When you are done, you can delete the server with `tofu destroy`.
