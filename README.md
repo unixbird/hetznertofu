@@ -5,8 +5,7 @@ Forked from [rericsson](https://github.com/rericsson/tofutest)'s test as I wante
 You just need to create your SSH key and API key in Hetzner and then you can insert them in the proper fields. Insert your API key inside of the terraform.tfvars file. 
 
 
-
-Edit the vars.tf to your preferred spec then simply run `tofu init` and `tofu plan`. If all is well and there aren't any errors run`tofu apply` to create the server with the desired spec. 
+First clone this repo and then edit the vars.tf to your preferred spec then simply run `tofu init` and `tofu plan`. If all is well and there aren't any errors run`tofu apply` to create the server with the desired spec. 
 
 
 After `tofu apply` returns the IP address, login in to that server using ssh with your specified key as root.
